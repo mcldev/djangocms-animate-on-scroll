@@ -6,19 +6,18 @@ from setuptools import setup, find_packages
 read = lambda filepath: codecs.open(filepath, 'r', 'utf-8').read()
 
 setup(
-    name='djangocms-named-menus',
-    version='1.0.1',
-    description='Allows you to add and edit named menus similar to Wordpress menus',
+    name='djangocms-animate-on-scroll',
+    version='1.0.0',
+    description='Allows you to add animate on scroll plugin to a cms page',
     long_description=read(os.path.join(os.path.dirname(__file__), 'README.rst')),
     author='Ryan Bagwell, Rogerio Carrasqueira, Michael Carder',
     license='BSD',
-    url='https://github.com/mcldev/djangocms-named-menus',
+    url='https://michalsnik.github.io/aos/',
     packages=find_packages(),
     zip_safe=False,
     include_package_data=True,
     install_requires=[
         'Django>=1.11',
-        'django-classy-tags',
         'django-cms>=3.3',
         'jsonfield>=1.0.0',
         'django-autoslug>=1.7.2',

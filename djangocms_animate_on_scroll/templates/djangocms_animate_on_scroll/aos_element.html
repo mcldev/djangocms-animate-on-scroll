@@ -1,11 +1,11 @@
 {% load cms_tags static sekizai_tags i18n %}
 
 {% addtoblock 'css' %}
-    <link rel="stylesheet" href="{% static 'djangocms_aos/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'djangocms_animate_on_scroll/aos.css' %}">
 {% endaddtoblock %}
 
 {% addtoblock 'js' %}
-    <script src="{% static 'djangocms_aos/aos.js' %}"></script>
+    <script src="{% static 'djangocms_animate_on_scroll/aos.js' %}"></script>
     <script>
         AOS.init({
             disable: 'phone'
@@ -14,8 +14,7 @@
     </script>
 {% endaddtoblock %}
 
-<div
-        data-aos="{{ instance.aos_animation }}"
+<div data-aos="{{ instance.aos_animation }}"
         {% if instance.aos_easing %}data-aos-easing="{{ instance.aos_easing }}"{% endif %}
         {% if instance.aos_anchor_placement %}data-aos-anchor-placement="{{ instance.aos_anchor_placement }}"{% endif %}
         {% if instance.aos_anchor %}data-aos-anchor="{{ instance.aos_anchor.id_name }}"{% endif %}

@@ -11,7 +11,7 @@ class AnimateOnScroll_Anchor_Plugin(CMSPluginBase):
     model = AnimateOnScroll_Anchor
     name = _('AnimateOnScroll - Anchor')
     module = _('Animate On Scroll')
-    render_template = 'djangocms_aos/aos_anchor.html'
+    render_template = 'djangocms_animate_on_scroll/aos_anchor.html'
 
     fieldsets = (
         (None, {
@@ -29,7 +29,7 @@ class AnimateOnScroll_Element_Plugin(CMSPluginBase):
     model = AnimateOnScroll_Element
     name = _('AnimateOnScroll - Element')
     module = _('Animate On Scroll')
-    render_template = 'djangocms_aos/aos_element.html'
+    render_template = 'djangocms_animate_on_scroll/aos_element.html'
     allow_children = True
     form = AnimateOnScroll_Element_Form
 
