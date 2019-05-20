@@ -15,7 +15,7 @@ python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 # NB - Ensure version number is updated
 
 # Test install works
-pip install -i https://test.pypi.org/simple/ djangocms-named-menus
+pip install -i https://test.pypi.org/simple/ djangocms-animate-on-scroll
 
 # Upload to Pypi
 # login as above
