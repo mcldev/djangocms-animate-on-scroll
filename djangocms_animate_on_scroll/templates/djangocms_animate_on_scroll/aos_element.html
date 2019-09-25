@@ -7,11 +7,22 @@
 {% addtoblock 'js' %}
     <script src="{% static 'djangocms_animate_on_scroll/aos.js' %}"></script>
     <script>
-        AOS.init({
+        AOS_INIT_PARAMS = {
             disable: 'phone'
-        });
-        //disable: window.innerWidth < 1024
+        };
+        AOS.init(AOS_INIT_PARAMS);
     </script>
+{% endaddtoblock %}
+
+{% addtoblock 'js' %}
+    {% if request.toolbar and request.toolbar.edit_mode_active %}
+        {# Reinitialises the script after Django CMS refreshes the content, otherwise content is not loaded in Edit mode #}
+        <script>
+            CMS.$(window).on('cms-content-refresh', function () {
+                 AOS.init(AOS_INIT_PARAMS);
+            });
+        </script>
+    {% endif %}
 {% endaddtoblock %}
 
 <div data-aos="{{ instance.aos_animation }}"

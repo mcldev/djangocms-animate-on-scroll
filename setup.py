@@ -3,13 +3,15 @@ import codecs
 import os
 from setuptools import setup, find_packages
 
-read = lambda filepath: codecs.open(filepath, 'r', 'utf-8').read()
+with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
+    README = readme.read()
 
 setup(
     name='djangocms-animate-on-scroll',
-    version='1.0.0',
+    version='1.0.1',
     description='Allows you to add the animate on scroll plugin to a cms page',
-    long_description=read(os.path.join(os.path.dirname(__file__), 'README.rst')),
+    long_description=README,
+    long_description_content_type='text/markdown',
     author='michalsnik, Michael Carder',
     license='MIT',
     url='https://github.com/mcldev/djangocms-animate-on-scroll',
