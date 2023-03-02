@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Enables the user to add style plugin that displays a html tag with
-the provided settings from the style plugin.
-"""
-from __future__ import unicode_literals
-
 import json
 
 from cms.models import CMSPlugin
@@ -12,12 +5,10 @@ from djangocms_attributes_field.fields import AttributesField
 
 from django.db import models
 from django.db.models.deletion import SET_NULL
-from django.utils.encoding import python_2_unicode_compatible
 from django.utils.text import slugify
 from django.utils.translation import ugettext_lazy as _
 
 
-@python_2_unicode_compatible
 class AnimateOnScroll_Anchor(CMSPlugin):
     id_name = models.CharField(
         verbose_name=_("ID name"),
@@ -32,7 +23,6 @@ class AnimateOnScroll_Anchor(CMSPlugin):
         self.id_name = valid_id_name
 
 
-@python_2_unicode_compatible
 class AnimateOnScroll_Element(CMSPlugin):
     # AOS Standard
     # --------------------------------
