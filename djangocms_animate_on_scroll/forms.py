@@ -1,10 +1,10 @@
-from django.forms.models import ModelForm
 from django import forms
+from django.forms.models import ModelForm
+
 from .consts import *
 
 
 class AnimateOnScroll_Element_Form(ModelForm):
-
     aos_animation = forms.ChoiceField(choices=AOS_ANIMATIONS)
 
     aos_easing = forms.ChoiceField(choices=AOS_EASING, required=False)
