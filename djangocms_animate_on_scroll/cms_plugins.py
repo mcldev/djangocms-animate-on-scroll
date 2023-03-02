@@ -1,3 +1,5 @@
+import json
+
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
@@ -5,6 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .forms import AnimateOnScroll_Element_Form
 from .models import AnimateOnScroll_Anchor, AnimateOnScroll_Element
+from .settings import get_aos_init_params
 
 
 class AnimateOnScroll_Anchor_Plugin(CMSPluginBase):
@@ -65,6 +68,11 @@ class AnimateOnScroll_Element_Plugin(CMSPluginBase):
             },
         ),
     )
+
+    def render(self, context, instance, placeholder):
+        context = super().render(context, instance, placeholder)
+        context["aos_init_params"] = json.dumps(get_aos_init_params())
+        return context
 
 
 plugin_pool.register_plugin(AnimateOnScroll_Element_Plugin)

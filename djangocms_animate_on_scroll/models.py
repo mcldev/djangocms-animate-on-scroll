@@ -63,12 +63,23 @@ class AnimateOnScroll_Element(CMSPlugin):
     # AOS Advanced
     # --------------------------------
     aos_offset = models.IntegerField(
-        verbose_name=_("Offset"), default=120, help_text=_("Change offset to trigger animations sooner or later (px)")
+        verbose_name=_("Offset"),
+        null=True,
+        blank=True,
+        help_text=_("Change offset to trigger animations sooner or later (px)"),
     )
     aos_duration = models.IntegerField(
-        verbose_name=_("Duration"), default=400, help_text=_("*Duration of animation (ms)")
+        verbose_name=_("Duration"),
+        null=True,
+        blank=True,
+        help_text=_("Duration of animation (ms)"),
     )
-    aos_delay = models.IntegerField(verbose_name=_("Delay"), default=0, help_text=_("Delay animation (ms)"))
+    aos_delay = models.IntegerField(
+        verbose_name=_("Delay"),
+        null=True,
+        blank=True,
+        help_text=_("Delay animation (ms)"),
+    )
     aos_once = models.BooleanField(
         verbose_name=_("Once"),
         default=False,
