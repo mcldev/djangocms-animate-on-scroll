@@ -1,7 +1,7 @@
 from django import forms
 from django.forms.models import ModelForm
 
-from .consts import *
+from .consts import AOS_ANIMATIONS, AOS_EASING, AOS_ANCHOR_PLACEMENT
 
 
 class AnimateOnScroll_Element_Form(ModelForm):
