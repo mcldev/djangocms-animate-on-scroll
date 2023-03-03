@@ -33,20 +33,13 @@ class AnimateOnScroll_Element_Plugin(CMSPluginBase):
     fieldsets = (
         (
             None,
-            {
-                "fields": (
-                    "aos_animation",
-                    "aos_easing",
-                )
-            },
+            {"fields": (("aos_animation", "aos_easing"),)},
         ),
         (
             _("AOS Anchor settings"),
             {
-                "fields": (
-                    "aos_anchor_placement",
-                    "aos_anchor",
-                ),
+                "classes": ("collapse",),
+                "fields": (("aos_anchor_placement", "aos_anchor"),),
             },
         ),
         (
