@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 15:38+0100\n"
-"PO-Revision-Date: 2023-03-03 15:58+0100\n"
+"POT-Creation-Date: 2023-03-03 16:57+0100\n"
+"PO-Revision-Date: 2023-03-03 16:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -132,19 +132,23 @@ msgstr "Une fois"
 
 #: djangocms_animate_on_scroll/models.py:86
 msgid ""
-"Choose wheter animation should fire once, or every time you scroll up/down "
-"to element"
+"Choose whether animation should fire once, or every time you scroll down to "
+"element"
 msgstr ""
 "Choisissez si l'animation doit se déclencher une fois ou à chaque fois que "
-"vous faites défiler un élément vers le haut ou vers le bas"
+"vous faites défiler l'élément"
 
 #: djangocms_animate_on_scroll/models.py:89
 msgid "Mirror"
 msgstr "Miroir"
 
 #: djangocms_animate_on_scroll/models.py:91
-msgid "Choose whether elements should animate out while scrolling past them"
-msgstr "Choisissez si les éléments doivent être animés lors du défilement"
+msgid ""
+"Choose whether the elements should animate in reverse when they leave the "
+"screen"
+msgstr ""
+"Choisissez si les éléments doivent s'animer en sens inverse lorsqu'ils "
+"quittent l'écran"
 
 #: djangocms_animate_on_scroll/models.py:102
 msgid "Additional classes"

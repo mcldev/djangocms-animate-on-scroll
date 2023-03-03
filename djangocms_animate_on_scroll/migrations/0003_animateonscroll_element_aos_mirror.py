@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='animateonscroll_element',
             name='aos_mirror',
-            field=models.BooleanField(help_text='Choose whether elements should animate out while scrolling past them', null=True, verbose_name='Mirror'),
+            field=models.BooleanField(help_text='Choose whether the elements should animate in reverse when they leave the screen', null=True, verbose_name='Mirror'),
         ),
     ]

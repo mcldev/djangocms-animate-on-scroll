@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='animateonscroll_element',
             name='aos_once',
-            field=models.BooleanField(help_text='Choose wheter animation should fire once, or every time you scroll up/down to element', null=True, verbose_name='Once'),
+            field=models.BooleanField(help_text='Choose whether animation should fire once, or every time you scroll down to element', null=True, verbose_name='Once'),
         ),
     ]
