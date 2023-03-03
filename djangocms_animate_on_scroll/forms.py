@@ -24,6 +24,15 @@ class AnimateOnScroll_Element_Form(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         aoe_init_params = get_aos_init_params()
+
+        self.fields["aos_easing"].widget.choices = choices_with_default_value(
+            self.fields["aos_easing"].widget.choices, aoe_init_params["easing"]
+        )
+
+        self.fields["aos_anchor_placement"].widget.choices = choices_with_default_value(
+            self.fields["aos_anchor_placement"].widget.choices, aoe_init_params["anchor-placement"]
+        )
+
         self.fields["aos_offset"].widget.attrs["placeholder"] = aoe_init_params["offset"]
         self.fields["aos_duration"].widget.attrs["placeholder"] = aoe_init_params["duration"]
         self.fields["aos_delay"].widget.attrs["placeholder"] = aoe_init_params["delay"]
