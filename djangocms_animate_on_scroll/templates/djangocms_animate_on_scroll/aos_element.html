@@ -1,4 +1,4 @@
-{% load cms_tags static sekizai_tags i18n %}
+{% load cms_tags static sekizai_tags i18n stripwhitespaces %}
 
 {% addtoblock 'css' %}
     <link rel="stylesheet" href="{% static 'djangocms_animate_on_scroll/aos.css' %}">
@@ -22,6 +22,7 @@
         </script>
     {% endif %}
 {% endaddtoblock %}
+{% stripwhitespaces %}
 <div data-aos="{{ instance.aos_animation }}"
         {% if instance.aos_easing %}data-aos-easing="{{ instance.aos_easing }}"{% endif %}
         {% if instance.aos_anchor_placement %}data-aos-anchor-placement="{{ instance.aos_anchor_placement }}"{% endif %}
@@ -36,5 +37,6 @@
         {% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}
         {% if instance.additional_classes %}class="{{ instance.get_additional_classes }}"{% endif %}
         {{ instance.attributes_str }}>
+{% endstripwhitespaces %}
     {% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}
 </div>
