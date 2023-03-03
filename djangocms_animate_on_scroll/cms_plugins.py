@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from .forms import AnimateOnScroll_Element_Form
 from .models import AnimateOnScroll_Anchor, AnimateOnScroll_Element
-from .settings import get_aos_init_params
+from .settings import get_aos_init_params_js
 
 
 class AnimateOnScroll_Anchor_Plugin(CMSPluginBase):
@@ -71,7 +71,7 @@ class AnimateOnScroll_Element_Plugin(CMSPluginBase):
 
     def render(self, context, instance, placeholder):
         context = super().render(context, instance, placeholder)
-        context["aos_init_params"] = json.dumps(get_aos_init_params())
+        context["aos_init_params"] = get_aos_init_params_js()
         return context
 
 

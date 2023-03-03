@@ -1,3 +1,5 @@
+import json
+
 from django.conf import settings
 
 DEFAULT_AOS_PARAMS = {
@@ -10,3 +12,7 @@ DEFAULT_AOS_PARAMS = {
 
 def get_aos_init_params():
     return {**DEFAULT_AOS_PARAMS, **getattr(settings, "AOS_INIT_PARAMS", {})}
+
+
+def get_aos_init_params_js():
+    return json.dumps(get_aos_init_params())
