@@ -23,6 +23,9 @@
     {% endif %}
 {% endaddtoblock %}
 {% stripwhitespaces %}
+{% if request.toolbar and request.toolbar.edit_mode_active %}
+    <a class="aos-plugin-edit-show" title="Animation: {{ instance.aos_animation }}" href="#{{ instance.id_name }}" style="position: absolute; z-index: 2">✨</a>
+{% endif %}
 <div data-aos="{{ instance.aos_animation }}"
         {% if instance.aos_easing %}data-aos-easing="{{ instance.aos_easing }}"{% endif %}
         {% if instance.aos_anchor_placement %}data-aos-anchor-placement="{{ instance.aos_anchor_placement }}"{% endif %}
