@@ -2,6 +2,7 @@ import json
 
 from django.conf import settings
 
+# Settings possible: https://github.com/michalsnik/aos#1-initialize-aos
 DEFAULT_AOS_PARAMS = {
     "disable": False,
     "offset": 120,
