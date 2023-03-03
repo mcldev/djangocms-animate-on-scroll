@@ -30,7 +30,7 @@
         {% if instance.aos_offset is not None %}data-aos-offset="{{ instance.aos_offset }}"{% endif %}
         {% if instance.aos_duration is not None %}data-aos-duration="{{ instance.aos_duration }}"{% endif %}
         {% if instance.aos_delay is not None %}data-aos-delay="{{ instance.aos_delay }}"{% endif %}
-        {% if instance.aos_once %}data-aos-once="{{ instance.aos_once }}"{% endif %}
+        {% if instance.aos_once is not None %}data-aos-once="{{ instance.aos_once|lower }}"{% endif %}
         {% if instance.aos_mirror is not None %}data-aos-mirror="{{ instance.aos_mirror|lower }}"{% endif %}
 
         {% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}

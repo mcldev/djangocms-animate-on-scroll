@@ -82,7 +82,7 @@ class AnimateOnScroll_Element(CMSPlugin):
     )
     aos_once = models.BooleanField(
         verbose_name=_("Once"),
-        default=False,
+        null=True,
         help_text=_("Choose wheter animation should fire once, or every time you scroll up/down to element"),
     )
     aos_mirror = models.BooleanField(
@@ -111,9 +111,6 @@ class AnimateOnScroll_Element(CMSPlugin):
         blank=True,
         excluded_keys=["class", "id", "style"],
     )
-
-    def get_aos_once(self):
-        return json.dumps(self.aos_once)
 
     def get_additional_classes(self):
         return " ".join(item.strip() for item in self.additional_classes.split(",") if item.strip())

@@ -7,6 +7,7 @@ DEFAULT_AOS_PARAMS = {
     "offset": 120,
     "duration": 400,
     "delay": 0,
+    "once": False,
     "mirror": False,
 }
 
