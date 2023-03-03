@@ -53,7 +53,10 @@ class AnimateOnScroll_Element_Plugin(CMSPluginBase):
             _("AOS Advanced settings"),
             {
                 "classes": ("collapse",),
-                "fields": (("aos_offset", "aos_duration", "aos_delay", "aos_once"),),
+                "fields": (
+                    ("aos_offset", "aos_duration", "aos_delay"),
+                    ("aos_once", "aos_mirror"),
+                ),
             },
         ),
         (

@@ -85,6 +85,11 @@ class AnimateOnScroll_Element(CMSPlugin):
         default=False,
         help_text=_("Choose wheter animation should fire once, or every time you scroll up/down to element"),
     )
+    aos_mirror = models.BooleanField(
+        verbose_name=_("Mirror"),
+        null=True,
+        help_text=_("Choose whether elements should animate out while scrolling past them"),
+    )
 
     # Default id/classes/attributes
     # --------------------------------
