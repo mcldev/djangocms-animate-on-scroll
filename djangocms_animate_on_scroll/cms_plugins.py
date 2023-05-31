@@ -3,7 +3,7 @@ import json
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import AnimateOnScroll_Element_Form
 from .models import AnimateOnScroll_Anchor, AnimateOnScroll_Element

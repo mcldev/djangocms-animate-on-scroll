@@ -6,7 +6,7 @@ from djangocms_attributes_field.fields import AttributesField
 from django.db import models
 from django.db.models.deletion import SET_NULL
 from django.utils.text import slugify
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 
 class AnimateOnScroll_Anchor(CMSPlugin):
