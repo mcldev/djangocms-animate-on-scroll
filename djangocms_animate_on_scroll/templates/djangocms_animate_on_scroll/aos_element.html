@@ -1,4 +1,4 @@
-{% load cms_tags static sekizai_tags i18n %}
+{% load cms_tags static sekizai_tags i18n stripwhitespaces %}
 
 {% addtoblock 'css' %}
     <link rel="stylesheet" href="{% static 'djangocms_animate_on_scroll/aos.css' %}">
@@ -7,9 +7,7 @@
 {% addtoblock 'js' %}
     <script src="{% static 'djangocms_animate_on_scroll/aos.js' %}"></script>
     <script>
-        AOS_INIT_PARAMS = {
-            disable: 'phone'
-        };
+        AOS_INIT_PARAMS = {{ aos_init_params|safe }};
         AOS.init(AOS_INIT_PARAMS);
     </script>
 {% endaddtoblock %}
@@ -24,19 +22,24 @@
         </script>
     {% endif %}
 {% endaddtoblock %}
-
+{% stripwhitespaces %}
+{% if request.toolbar and request.toolbar.edit_mode_active %}
+    <a class="aos-plugin-edit-show" title="Animation: {{ instance.aos_animation }}" href="#{{ instance.id_name }}" style="position: absolute; z-index: 2">✨</a>
+{% endif %}
 <div data-aos="{{ instance.aos_animation }}"
         {% if instance.aos_easing %}data-aos-easing="{{ instance.aos_easing }}"{% endif %}
         {% if instance.aos_anchor_placement %}data-aos-anchor-placement="{{ instance.aos_anchor_placement }}"{% endif %}
         {% if instance.aos_anchor %}data-aos-anchor="{{ instance.aos_anchor.id_name }}"{% endif %}
 
-        {% if instance.aos_offset %}data-aos-offset="{{ instance.aos_offset }}"{% endif %}
-        {% if instance.aos_duration %}data-aos-duration="{{ instance.aos_duration }}"{% endif %}
-        {% if instance.aos_delay %}data-aos-delay="{{ instance.aos_delaye }}"{% endif %}
-        {% if instance.aos_once %}data-aos-once="{{ instance.aos_once }}"{% endif %}
+        {% if instance.aos_offset is not None %}data-aos-offset="{{ instance.aos_offset }}"{% endif %}
+        {% if instance.aos_duration is not None %}data-aos-duration="{{ instance.aos_duration }}"{% endif %}
+        {% if instance.aos_delay is not None %}data-aos-delay="{{ instance.aos_delay }}"{% endif %}
+        {% if instance.aos_once is not None %}data-aos-once="{{ instance.aos_once|lower }}"{% endif %}
+        {% if instance.aos_mirror is not None %}data-aos-mirror="{{ instance.aos_mirror|lower }}"{% endif %}
 
         {% if instance.id_name %} id="{{ instance.id_name }}"{% endif %}
         {% if instance.additional_classes %}class="{{ instance.get_additional_classes }}"{% endif %}
         {{ instance.attributes_str }}>
+{% endstripwhitespaces %}
     {% for plugin in instance.child_plugin_instances %}{% render_plugin plugin %}{% endfor %}
 </div>

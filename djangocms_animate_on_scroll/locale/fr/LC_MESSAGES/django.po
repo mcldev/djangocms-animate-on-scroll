@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-03 16:57+0100\n"
+"PO-Revision-Date: 2023-03-03 16:57+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.2.2\n"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:15
+msgid "AnimateOnScroll - Anchor"
+msgstr "AnimateOnScroll - Ancre"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:16
+#: djangocms_animate_on_scroll/cms_plugins.py:28
+msgid "Animate On Scroll"
+msgstr "Animate On Scroll"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:27
+msgid "AnimateOnScroll - Element"
+msgstr "AnimateOnScroll - Élément"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:39
+msgid "AOS Anchor settings"
+msgstr "AOS paramètres de l'ancre"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:46
+msgid "AOS Advanced settings"
+msgstr "AOS paramètres avancés"
+
+#: djangocms_animate_on_scroll/cms_plugins.py:56
+msgid "Advanced Element settings"
+msgstr "Paramètres avancés de l'élément"
+
+#: djangocms_animate_on_scroll/forms.py:11
+msgid "Yes"
+msgstr "Oui"
+
+#: djangocms_animate_on_scroll/forms.py:11
+msgid "No"
+msgstr "Non"
+
+#: djangocms_animate_on_scroll/models.py:14
+#: djangocms_animate_on_scroll/models.py:97
+msgid "ID name"
+msgstr "ID"
+
+#: djangocms_animate_on_scroll/models.py:30
+msgid "AOS Animation"
+msgstr "AOS Animation"
+
+#: djangocms_animate_on_scroll/models.py:32
+msgid ""
+"Script will trigger \"animation_name\" animation on this element, if you "
+"scroll to it."
+msgstr ""
+"Le script déclenchera l'animation choisie sur cet élément, si vous le faites "
+"défiler."
+
+#: djangocms_animate_on_scroll/models.py:36
+msgid "Anchor Easing"
+msgstr "Easing de l'ancre"
+
+#: djangocms_animate_on_scroll/models.py:39
+msgid "Choose timing function to ease elements in different ways"
+msgstr "Choisir une fonction de temporisation"
+
+#: djangocms_animate_on_scroll/models.py:45
+msgid "Anchor Placement"
+msgstr "Placement de l'ancre"
+
+#: djangocms_animate_on_scroll/models.py:48
+msgid ""
+"Anchor placement - which one position of element on the screen should "
+"trigger animation"
+msgstr ""
+"Placement de l'ancre - quelle position de l'élément sur l'écran doit "
+"déclencher l'animation"
+
+#: djangocms_animate_on_scroll/models.py:53
+msgid "Animate On Scroll Anchor"
+msgstr "Animate On Scroll Ancre"
+
+#: djangocms_animate_on_scroll/models.py:58
+msgid ""
+"Anchor element, whose offset will be counted to trigger animation instead of "
+"actual elements offset"
+msgstr ""
+"Élément d'ancrage, dont le décalage sera compté pour déclencher l'animation "
+"au lieu du décalage des éléments réels"
+
+#: djangocms_animate_on_scroll/models.py:66
+msgid "Offset"
+msgstr "Décalage"
+
+#: djangocms_animate_on_scroll/models.py:69
+msgid "Change offset to trigger animations sooner or later (px)"
+msgstr ""
+"Modifier le décalage pour déclencher les animations plus tôt ou plus tard "
+"(px)"
+
+#: djangocms_animate_on_scroll/models.py:72
+msgid "Duration"
+msgstr "Durée"
+
+#: djangocms_animate_on_scroll/models.py:75
+msgid "Duration of animation (ms)"
+msgstr "Durée de l'animation (ms)"
+
+#: djangocms_animate_on_scroll/models.py:78
+msgid "Delay"
+msgstr "Délai"
+
+#: djangocms_animate_on_scroll/models.py:81
+msgid "Delay animation (ms)"
+msgstr "Retarder l'animation (ms)"
+
+#: djangocms_animate_on_scroll/models.py:84
+msgid "Once"
+msgstr "Une fois"
+
+#: djangocms_animate_on_scroll/models.py:86
+msgid ""
+"Choose whether animation should fire once, or every time you scroll down to "
+"element"
+msgstr ""
+"Choisissez si l'animation doit se déclencher une fois ou à chaque fois que "
+"vous faites défiler l'élément"
+
+#: djangocms_animate_on_scroll/models.py:89
+msgid "Mirror"
+msgstr "Miroir"
+
+#: djangocms_animate_on_scroll/models.py:91
+msgid ""
+"Choose whether the elements should animate in reverse when they leave the "
+"screen"
+msgstr ""
+"Choisissez si les éléments doivent s'animer en sens inverse lorsqu'ils "
+"quittent l'écran"
+
+#: djangocms_animate_on_scroll/models.py:102
+msgid "Additional classes"
+msgstr "Classes supplémentaires"
+
+#: djangocms_animate_on_scroll/models.py:106
+msgid ""
+"Additional comma separated list of classes to be added to the element e.g. "
+"\"row, column-12, clearfix\"."
+msgstr ""
+"Liste supplémentaire, séparée par des virgules, des classes à ajouter à "
+"l'élément, par exemple \"row, column-12, clearfix\"."
+
+#: djangocms_animate_on_scroll/models.py:110
+msgid "Attributes"
+msgstr "Attributs"
